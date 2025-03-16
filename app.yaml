@@ -4,6 +4,10 @@ entrypoint: gunicorn -b :$PORT agriconnect.wsgi
 env_variables:
   DJANGO_SETTINGS_MODULE: "agriconnect.settings"
   DEBUG: "False"
+  DB_NAME: "agriconnect"
+  DB_USER: "postgres"
+  DB_HOST: "/cloudsql/[YOUR-PROJECT-ID]:us-central1:agriconnect-db"
+  GS_BUCKET_NAME: "agriconnect-media"
 
 handlers:
 - url: /static
