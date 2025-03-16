@@ -9,6 +9,9 @@ env_variables:
   DB_HOST: "/cloudsql/[YOUR-PROJECT-ID]:us-central1:agriconnect-db"
   GS_BUCKET_NAME: "agriconnect-media"
 
+beta_settings:
+  cloud_sql_instances: "[YOUR-PROJECT-ID]:us-central1:agriconnect-db"
+
 handlers:
 - url: /static
   static_dir: staticfiles/
